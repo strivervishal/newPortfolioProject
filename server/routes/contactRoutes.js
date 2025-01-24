@@ -3,6 +3,7 @@ const router = express.Router();
 const multer = require("multer");
 const Message = require("../models/message");
 const nodemailer = require("nodemailer");
+require("dotenv").config();
 
 // Configure Multer
 const upload = multer();
