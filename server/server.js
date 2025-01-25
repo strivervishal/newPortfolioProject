@@ -9,7 +9,14 @@ const contactRoutes = require("./routes/contactRoutes");
 const app = express();
 
 // Middleware
-app.use(cors());
+const corsOptions = {
+  origin: "https://new-portfolio-project-three.vercel.app", // Frontend domain
+  methods: ["GET", "POST"], // Allowed methods
+  allowedHeaders: ["Content-Type"], // Allowed headers
+};
+
+app.use(cors(corsOptions));
+
 app.use(bodyParser.json());
 
 // Routes
